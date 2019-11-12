@@ -1,0 +1,1 @@
+Design a voting system. 100M users will be logging in within a window of 24h (not necessarily uniformly). Every user will be able to choose from a fixed list of options. If the user has already voted the system should not let them to vote a second time. Additional constraint: only the first 100K votes are accepted. If the quota is exceeded any attempt to vote should be rejected.
