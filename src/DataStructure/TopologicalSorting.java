@@ -1,4 +1,11 @@
 //https://www.geeksforgeeks.org/topological-sorting/
+
+/*
+ * Use Case : 
+ * A common application of topological sorting is in scheduling a sequence of jobs.
+ * The jobs are represented by vertices, and there is an edge from xto yif job xmust 
+ * be completed before job ycan be started
+ */
 package DataStructure;
 
 import java.util.LinkedList;
@@ -12,7 +19,7 @@ public class TopologicalSorting {
 
 		public Graph(int vertex) {
 			this.vertex = vertex;
-			adj = new LinkedList[vertex]; 
+			adj = new LinkedList[vertex];
 			for (int index = 0; index < vertex; index++) {
 				adj[index] = new LinkedList<Integer>();
 			}
