@@ -1,10 +1,12 @@
 /*
- * https://www.geeksforgeeks.org/ceiling-in-a-sorted-array/
+ * https://www.geeksforgeeks.org/find-a-fixed-point-in-a-given-array/
  */
 package Algorithm;
 
 public class FixedPoint {
 	public static void main(String[] args) {
+		int arr[] = {-10, -5, 3, 4, 7, 9};
+		System.out.println(binarySearch(arr, 0, (arr.length-1), -1));
 	}
 
 	public static int binarySearch(int[] array, int start, int end, int ele) {
