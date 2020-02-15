@@ -9,7 +9,8 @@ public class CeilingInSortedArray {
 //		System.out.println(ceilBinarySearch(arr, 0, arr.length-1, 0));
 //		System.out.println(ceilBinarySearch(arr, 0, arr.length-1, 1));
 //		System.out.println(ceilBinarySearch(arr, 0, arr.length-1, 5));
-		System.out.println(ceilBinarySearch(arr, 0, arr.length-1, 20));
+//		System.out.println(ceilBinarySearch(arr, 0, arr.length-1, 20));
+		System.out.println(ceilBinarySearch(arr, 0, arr.length-1, 12));
 	}
 	
 	public static int ceilBinarySearch(int array[], int start, int end, int element) {
@@ -24,13 +25,13 @@ public class CeilingInSortedArray {
 			return midIndex;
 		}
 		if(element > array[midIndex]) {
-			if((midIndex+1 <= end) && (array[midIndex+1] > element)) {
+			if((midIndex+1 <= end) && (array[midIndex+1] > element) && (array[midIndex] < element)) {
 				return (midIndex+1);
 			}else {
 				return ceilBinarySearch(array, midIndex+1, end, element);
 			}
 		}else {
-			if((midIndex-1 >= start) && (array[midIndex-1] < element)) {
+			if((midIndex-1 >= start) && (array[midIndex-1] < element) && (array[midIndex] > element)) {
 				return (midIndex);
 			}else {
 				return ceilBinarySearch(array, start, midIndex - 1, element);
