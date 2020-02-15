@@ -1,7 +1,7 @@
 /*
  * https://www.geeksforgeeks.org/count-number-of-occurrences-or-frequency-in-a-sorted-array/
  */
-package DataStructure;
+package Algorithm;
 
 public class OccurrenceInSortedArray {
 	public static void main(String[] args) {

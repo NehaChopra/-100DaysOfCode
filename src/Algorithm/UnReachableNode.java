@@ -1,5 +1,5 @@
 //https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
-package DataStructure;
+package Algorithm;
 
 import java.util.LinkedList;
 import java.util.ListIterator;

@@ -1,7 +1,7 @@
 /*
  * https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
  */
-package DataStructure;
+package Algorithm;
 
 import java.util.Scanner;
 

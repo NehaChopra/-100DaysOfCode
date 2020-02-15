@@ -1,7 +1,7 @@
 /*
  * https://www.geeksforgeeks.org/ceiling-in-a-sorted-array/
  */
-package DataStructure;
+package Algorithm;
 
 public class CeilingInSortedArray {
 	public static void main(String[] args) {

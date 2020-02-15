@@ -1,5 +1,5 @@
 //https://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/
-package DataStructure;
+package Algorithm;
 
 import java.util.Arrays;
 

@@ -1,7 +1,7 @@
 /*
  *https://www.geeksforgeeks.org/floor-in-a-sorted-array/
  */
-package DataStructure;
+package Algorithm;
 
 public class FloorInSortedArray {
 	public static void main(String[] args) {
