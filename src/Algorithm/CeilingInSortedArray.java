@@ -5,7 +5,7 @@ package Algorithm;
 
 public class CeilingInSortedArray {
 	public static void main(String[] args) {
-		int arr[] = {1, 2, 8, 10, 10, 12, 19}; ;
+		int arr[] = {1, 2, 8, 10, 10, 12, 19}; 
 //		System.out.println(ceilBinarySearch(arr, 0, arr.length-1, 0));
 //		System.out.println(ceilBinarySearch(arr, 0, arr.length-1, 1));
 //		System.out.println(ceilBinarySearch(arr, 0, arr.length-1, 5));
