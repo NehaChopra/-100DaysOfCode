@@ -8,7 +8,8 @@ public class PeakInArray {
 //		int arr [] = {5, 10, 20, 15};
 //		int arr [] = {10, 20, 15, 2, 23, 90, 67};
 //		int arr [] = {10, 20, 30, 40, 50};
-		int arr [] = {100, 80, 60, 50, 20};
+//		int arr [] = {100, 80, 60, 50, 20};
+		int arr [] = {10, 20, 15, 2, 23, 90, 67};
 		System.out.println(peakBinarySearch(arr, 0 , arr.length -1));
 	}
 
