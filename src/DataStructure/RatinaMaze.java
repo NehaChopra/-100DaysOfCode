@@ -1,5 +1,5 @@
 //https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1
-package Backtracking;
+package DataStructure;
 import java.util.Scanner;
 
 class RatinaMaze {

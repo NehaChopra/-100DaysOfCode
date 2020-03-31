@@ -1,5 +1,5 @@
 //https://practice.geeksforgeeks.org/problems/n-queen-problem/0
-package Backtracking;
+package DataStructure;
 
 import java.util.Scanner;
 import java.util.Stack;
