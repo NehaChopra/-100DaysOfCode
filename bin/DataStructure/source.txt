@@ -1,0 +1,22 @@
+1. https://www.geeksforgeeks.org/trie-insert-and-search/
+2. https://www.geeksforgeeks.org/longest-prefix-matching-a-trie-based-solution-in-java/
+3. https://www.geeksforgeeks.org/longest-common-prefix-using-trie/
+4. https://www.geeksforgeeks.org/word-formation-using-concatenation-of-two-dictionary-words/
+5. https://www.geeksforgeeks.org/implement-reverse-dns-look-cache/
+6. https://www.geeksforgeeks.org/implement-forward-dns-look-cache/
+7. https://www.geeksforgeeks.org/implement-a-phone-directory/
+8. https://www.geeksforgeeks.org/boggle-set-2-using-trie/
+
+
+1. https://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/
+2. https://www.geeksforgeeks.org/segment-tree-set-1-range-minimum-query/
+3. https://www.geeksforgeeks.org/efficiently-design-insert-delete-median-queries-set/
+4. https://www.geeksforgeeks.org/range-minimum-query-for-static-array/
+5. https://www.geeksforgeeks.org/range-lcm-queries/
+6. https://www.geeksforgeeks.org/min-max-range-queries-array/
+7. https://www.geeksforgeeks.org/largest-rectangular-area-in-a-histogram-set-1/
+8. https://www.geeksforgeeks.org/heavy-light-decomposition-set-1-introduction/
+9. https://www.geeksforgeeks.org/gcds-of-a-given-index-ranges-in-an-array/
+10. https://www.geeksforgeeks.org/querying-maximum-number-divisors-number-given-range/
+
+

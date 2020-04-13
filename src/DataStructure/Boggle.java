@@ -38,7 +38,7 @@ public class Boggle {
 		if (root.endOfWord) {
 			return str;
 		}
-		if(root.children[index][jIndex]) {
+		if(root.children[index][jIndex] != null) {
 			
 		}
 		return "";
