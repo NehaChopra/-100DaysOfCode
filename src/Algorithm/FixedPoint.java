@@ -3,8 +3,22 @@
  */
 package Algorithm;
 
+class Money {
+    int amount;
+    String currencyCode;
+    
+    public Money(int amount, String currencyCode) {
+    	this.amount = amount;
+    	this.currencyCode = currencyCode;
+    }
+}
 public class FixedPoint {
 	public static void main(String[] args) {
+		Money income = new Money(55, "USD");
+		Money expenses = new Money(55, "USD");
+		boolean balanced = income.equals(expenses);
+		System.out.println(balanced);
+				
 		int arr[] = {-10, -5, 3, 4, 7, 9};
 		System.out.println(binarySearch(arr, 0, (arr.length-1), -1));
 	}
@@ -25,3 +39,6 @@ public class FixedPoint {
 		return -1;
 	}
 }
+
+
+
