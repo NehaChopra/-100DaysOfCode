@@ -13,10 +13,12 @@ Output:
  */
 package DataStructure;
 
-import java.util.Scanner;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 public class HeapSort {
-	public static void heapSort(int[] inputArray) {
+	public static void heapSort(Integer[] inputArray) {
 		for (int index = inputArray.length / 2 - 1; index >= 0; index--) {
 			heapify(index, inputArray.length, inputArray);
 		}
@@ -27,7 +29,7 @@ public class HeapSort {
 		}
 	}
 
-	public static void heapify(int index, int end, int[] inputArray) {
+	public static void heapify(int index, int end, Integer[] inputArray) {
 		int largest = index;
 		int left = leftChild(index);
 		int right = rightChild(index);
@@ -51,7 +53,7 @@ public class HeapSort {
 		return ((2 * index) + 2);
 	}
 
-	public static void swap(int iIndex, int jIndex, int[] inputArray) {
+	public static void swap(int iIndex, int jIndex, Integer[] inputArray) {
 		int temp = inputArray[iIndex];
 		inputArray[iIndex] = inputArray[jIndex];
 		inputArray[jIndex] = temp;
@@ -104,6 +106,107 @@ public class HeapSort {
 		return res;
 	}
 
+	public static int deleteProducts(List<Integer> ids, int m) {
+		// Write your code here
+		if (ids.size() < 0 || m == 0) {
+			return 0;
+		}
+		HashMap<Integer, Integer> hmap = new HashMap<>();
+		for (int index = 0; index < ids.size(); index++) {
+			if (hmap.containsKey(ids.get(index)))
+				hmap.put(ids.get(index), hmap.get(ids.get(index)) + 1);
+			else
+				hmap.put(ids.get(index), 1);
+		}
+		Integer[] array = new Integer[hmap.size()];
+		int index = 0;
+		for (Integer val : hmap.keySet()) {
+			array[index] = hmap.get(val);
+			index++;
+		}
+
+		heapSort(array);
+		int finalSize = 0;
+		for (int i = 0; i < array.length && m > 0; i++) {
+			m = m - array[i];
+			if (m >= 0)
+				finalSize++;
+		}
+		return array.length - finalSize;
+	}
+
+	public static int findMaxSubarraySum(int arr[], int threshold) {
+//		if (arr.size() <= 0 || threshold == 0) {
+//			return 0;
+//		}
+
+		int sum = arr[0];
+		int maxSum = 0;
+		int jIndex = 0;
+
+		for (int index = 1; index < arr.length - 1; index++) {
+
+			if (sum <= threshold)
+				maxSum = Math.max(maxSum, sum);
+
+			while (sum + arr[index] >= threshold && jIndex < index) {
+				sum -= arr[jIndex];
+				jIndex++;
+			}
+
+			for (int mindex = 0; mindex < jIndex; mindex++) {
+				sum += arr[mindex];
+			}
+			sum += arr[index];
+		}
+
+		if (sum <= threshold) {
+			maxSum = Math.max(maxSum, sum);
+		}
+
+		return maxSum;
+	}
+
+//	public static List<String> deviceNameSystem(List<String> devicenames) {
+//		Map<String, Integer> deviceNamesMap = new HashMap();
+//		List<String> uniqueNames = new ArrayList<>();
+//
+//		if (devicenames == null || devicenames.isEmpty()) {
+//			return uniqueNames;
+//		}
+//
+//		for (String name : devicenames)
+//			if (deviceNamesMap.containsKey(name)) {
+//				uniqueNames.add(name + deviceNamesMap.get(name));
+//				deviceNamesMap.put(name, deviceNamesMap.get(name) + 1);
+//			} else {
+//				deviceNamesMap.put(name, 1);
+//				uniqueNames.add(name);
+//			}
+//		return uniqueNames;
+//	}
+//
+//	public static List<String> deviceNameSystem(List<String> devicenames) {
+//		Map<String, Integer> deviceNamesMap = new HashMap<String, Integer>();
+//		List<String> uniqueNames = new ArrayList<>();
+//
+//		if (devicenames == null || devicenames.isEmpty()) {
+//			return uniqueNames;
+//		}
+//
+//		for (String name : devicenames) {
+//			if (deviceNamesMap.containsKey(name)) {
+//				uniqueNames.add(name + deviceNamesMap.get(name));
+//				deviceNamesMap.put(name, deviceNamesMap.get(name) + 1);
+//			} else {
+//				deviceNamesMap.put(name, 1);
+//				uniqueNames.add(name);
+//			}
+//
+//		}
+//		return uniqueNames;
+//	}
+
 	public static void main(String[] args) {
 //		Scanner input = new Scanner(System.in);
 //		int testCasesNumber = input.nextInt();
@@ -134,6 +237,8 @@ public class HeapSort {
 //		System.out.println(HeapSort.solution("aaa"));
 //		System.out.println(HeapSort.solution("aakmaakmakdak"));
 //		System.out.println(HeapSort.solution("codelity"));
-		System.out.println(HeapSort.solution(""));
+//		System.out.println(HeapSort.solution(""));
+		int arr[] = new int[] { 1, 2, 4, 5, 10 };
+		System.out.println(findMaxSubarraySum(arr, 10));
 	}
 }
